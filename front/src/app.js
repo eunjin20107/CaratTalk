@@ -5,11 +5,12 @@ const dotenv = require("dotenv");
 dotenv.config();
 const path = require("path");
 
-const PORT = 4000; //나중에 바꿀 것
 const app = express();
 
+const PORT = 4000; //나중에 바꿀 것
+
 app.set("view engine", "pug");
-app.set(express.static(path.join(__dirname, "/assets")));
+app.use(express.static(path.join(__dirname, "/assets")));
 app.use(morgan(`dev`));
 app.use(cors());
 
