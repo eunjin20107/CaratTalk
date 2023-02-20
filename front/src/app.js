@@ -16,6 +16,10 @@ app.use(cors());
 
 app.get("/", (req, res) => {
   res.render("index");
+}); //router 로 바꿀거임 임시임
+
+app.get("/profile", (req, res) => {
+  res.render("profile");
 });
 
 app.listen(PORT, () => {
